@@ -60,7 +60,7 @@ const Contact = ({ title, content, id, t }) => {
               </Col>
               <Col span={24}>
                 <TextArea
-                  placeholder="Your Message"
+                  placeholder="I'm interested in learning more because..."
                   value={values.message || ""}
                   name="message"
                   id="Message"
