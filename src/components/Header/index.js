@@ -57,7 +57,7 @@ const Header = ({ t }) => {
       <S.Container>
         <Row type="flex" justify="space-between" gutter={20}>
           <S.LogoContainer to="/" aria-label="homepage">
-            <div style={{fontSize: '32px'}}>Build A Fair</div>
+            <div style={{fontSize: '54px', color: "#20B0CC"}}>Build A Fair</div>
           </S.LogoContainer>
           <S.NotHidden>
             <MenuItem />
