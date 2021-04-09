@@ -4,10 +4,10 @@ import * as S from "./styles";
 
 const Input = ({ id, name, placeholder, onChange, t }) => (
   <S.Container>
-    <label htmlFor={name}>{t(id)}</label>
+    <span htmlFor={name}>{id}</span>
     <S.Input
       spellcheck="false"
-      placeholder={t(placeholder)}
+      placeholder={placeholder}
       name={name}
       id={name}
       onChange={onChange}

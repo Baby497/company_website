@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { notification } from "antd";
-import axios from "axios";
+import emailjs from 'emailjs-com';
 
 const useForm = (validate) => {
   const [values, setValues] = useState({});
@@ -16,17 +16,18 @@ const useForm = (validate) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    console.log(values)
     setErrors(validate(values));
     // Your url for API
-    const url = "";
+    // const url = "";
     if (Object.keys(values).length === 3) {
-      axios
-        .post(url, {
-          ...values,
-        })
-        .then(() => {
-          setShouldSubmit(true);
-        });
+      emailjs.sendForm('build-a-fair', 'template_v1rlwje', event.target, 'user_sMgBq4LTeD4ijE1vDXECk')
+      .then((result) => {
+        setShouldSubmit(true);
+      }, (error) => {
+        console.log('error in form' + error)
+        setShouldSubmit(false);
+      });
     }
   };
 

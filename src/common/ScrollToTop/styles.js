@@ -10,7 +10,7 @@ export const Up = styled.div`
   list-style: none;
   position: fixed;
   right: 100px;
-  bottom: 50px;
+  bottom: 30px;
   z-index: 10;
   width: 40px;
   height: 40px;

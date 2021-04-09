@@ -5,7 +5,7 @@ import { withTranslation } from "react-i18next";
 
 import * as S from "./styles";
 
-const SvgIcon = lazy(() => import("../../common/SvgIcon"));
+// const SvgIcon = lazy(() => import("../../common/SvgIcon"));
 const Button = lazy(() => import("../../common/Button"));
 
 const Header = ({ t }) => {
@@ -37,9 +37,9 @@ const Header = ({ t }) => {
         <S.CustomNavLinkSmall onClick={() => scrollTo("mission")}>
           <S.Span>{t("Mission")}</S.Span>
         </S.CustomNavLinkSmall>
-        <S.CustomNavLinkSmall onClick={() => scrollTo("product")}>
+        {/* <S.CustomNavLinkSmall onClick={() => scrollTo("product")}>
           <S.Span>{t("Product")}</S.Span>
-        </S.CustomNavLinkSmall>
+        </S.CustomNavLinkSmall> */}
         <S.CustomNavLinkSmall
           style={{ width: "180px" }}
           onClick={() => scrollTo("contact")}
@@ -57,7 +57,7 @@ const Header = ({ t }) => {
       <S.Container>
         <Row type="flex" justify="space-between" gutter={20}>
           <S.LogoContainer to="/" aria-label="homepage">
-            <SvgIcon src="logo.svg" />
+            <div style={{fontSize: '32px'}}>Build A Fair</div>
           </S.LogoContainer>
           <S.NotHidden>
             <MenuItem />
